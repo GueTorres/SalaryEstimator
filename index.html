@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Estimator</title>
+</head>
+<body>
+    <h1>Salary Estimator</h1>
+    <form method="POST" action="{{url_for('predict')}}">
+        Experience: <input type="text" />
+        Test Score: <input type="text" />
+        Interview Score: <input type="text" />
+        <button>Predict</button>
+    </form>    
+
+    <h1>Salary: {{ prediction_text }} </h1>
+</body>
+</html>
