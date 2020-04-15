@@ -36,9 +36,7 @@ def predict():
     """
     inputs = np.array([int(x) for x in request.form.values()]).reshape([1, -1])
     prediction = model.predict(inputs)
-    return render_template('index.html', prediction_text='Employee salary should be $ {}'.format(prediction))
-    
-    #prediction_text=int((prediction[0]))
+    return render_template('index.html', prediction_text=int((prediction[0])))
 
 if __name__ == "__main__":
     app.run(debug=True)
